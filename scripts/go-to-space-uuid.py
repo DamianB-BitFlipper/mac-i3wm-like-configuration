@@ -34,35 +34,35 @@ def run_bash_command(command: str, *, json_output: bool = False) -> dict | None:
         return None
 
 
-def get_window_data_from_application_name(
-    yabai_windows: dict, application_name: str
+def get_space_data_from_uuid(
+    yabai_spaces: dict, uuid: str
 ) -> dict | None:
-    for window in yabai_windows:
-        if window["app"] == application_name:
-            return window
+    for space in yabai_spaces:
+        if space["uuid"] == uuid:
+            return space
 
-    # The application was not found
+    # The space was not found
     return None
 
 
 def main():
-    # Get the application name from the command line arguments
+    # Get the space uuid from the command line arguments
     if len(sys.argv) != 2:
-        print(f"Usage: {sys.argv[0]} <app_name>")
+        print(f"Usage: {sys.argv[0]} <space_uuid>")
         return
 
-    app_name = sys.argv[1]
+    space_uuid = sys.argv[1]
 
-    yabai_windows = run_bash_command("yabai -m query --windows", json_output=True)
+    yabai_spaces = run_bash_command("yabai -m query --spaces", json_output=True)
 
-    if yabai_windows is None:
+    if yabai_spaces is None:
         return
 
-    window = get_window_data_from_application_name(yabai_windows, app_name)
+    space = get_space_data_from_uuid(yabai_spaces, space_uuid)
 
-    # If the window was found, focus to it
-    if window is not None:
-        run_bash_command(f"yabai -m space --focus {window['space']}")
+    # If the space was found, focus to it
+    if space is not None:
+        run_bash_command(f"yabai -m space --focus {space['index']}")
 
 
 if __name__ == "__main__":

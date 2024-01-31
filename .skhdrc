@@ -129,13 +129,13 @@ alt - 2 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application
 alt - 3 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py "Brave Browser"
 alt - 4 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Mail
 alt - 5 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Spotify
-alt - 6 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py KeePassX
-alt - 7 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Signal
-alt - 8 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Calendar
+alt - 7 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Calendar
+alt - 8 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Signal
 alt - 9 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Slack
 
-# Focus on the main Desktop
+# Focus on the Desktops
 alt - 0 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-space-uuid.py 13BCCB37-71C8-4804-A3D1-B8218650A51A
+alt - 6 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-space-uuid.py CCB93514-564F-47D8-B150-90E8AAF301F9
 
 # Enter fullscreen mode for the focused container
 alt - f : yabai -m window --toggle zoom-fullscreen

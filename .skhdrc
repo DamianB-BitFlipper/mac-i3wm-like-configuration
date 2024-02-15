@@ -128,7 +128,7 @@ alt - 1 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application
 alt - 2 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py kitty
 alt - 3 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py "Brave Browser"
 alt - 4 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Mail
-alt - 5 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Spotify
+alt - 5 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Music
 alt - 7 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Calendar
 alt - 8 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Signal
 alt - 9 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Slack

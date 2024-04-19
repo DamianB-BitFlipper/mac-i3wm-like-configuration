@@ -1,5 +1,15 @@
 #!/usr/bin/env python3
 
+# NOTE: On reboot, you may get an error that:
+# `Error running command: cannot focus space due to an error with the scripting-addition.`
+#
+# To fix this, you need to run the following commands:
+# `sudo yabai --uninstall-sa`
+# `sudo yabai --load-sa`
+# `sudo yabai --load-sa` ## Run this command twice for some reason
+#
+# Follow https://github.com/koekeishiya/yabai/issues/1158 for more info.
+
 import sys
 from script_utils import run_bash_command
 

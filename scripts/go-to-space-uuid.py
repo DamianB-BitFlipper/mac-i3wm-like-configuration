@@ -22,9 +22,9 @@ def main():
 
     space_uuid = sys.argv[1]
 
-    yabai_spaces = run_bash_command("yabai -m query --spaces", json_output=True)
+    yabai_spaces, ret_code = run_bash_command("yabai -m query --spaces", json_output=True)
 
-    if yabai_spaces is None:
+    if ret_code != 0:
         return
 
     space = get_space_data_from_uuid(yabai_spaces, space_uuid)

@@ -2,7 +2,7 @@ import subprocess
 import json
 
 
-def run_bash_command(command: str, *, json_output: bool = False) -> dict | None:
+def run_bash_command(command: str, *, json_output: bool = False) -> tuple[dict | None, int]:
     try:
         # Run the command and capture the output
         result = subprocess.run(
@@ -18,14 +18,14 @@ def run_bash_command(command: str, *, json_output: bool = False) -> dict | None:
             # Parse the JSON output if requested
             if json_output:
                 parsed_output = json.loads(result.stdout)
-                return parsed_output
+                return parsed_output, result.returncode
             else:
-                return None
+                return None, result.returncode
         else:
             # Handle the case where the command failed
-            print(f"Error running command: {result.stderr}")
-            return None
+            err_msg = f"Error running command: {result.stderr}"
+            return err_msg, result.returncode
     except Exception as e:
         # Handle other exceptions
-        print(f"An error occurred: {e}")
-        return None
+        err_msg = f"An error occurred: {e}"
+        return err_msg, -1

@@ -127,15 +127,18 @@ alt + shift - right : yabai -m window --swap east || $(yabai -m window --display
 alt - 1 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Emacs
 alt - 2 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py kitty
 alt - 3 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py "Brave Browser"
-alt - 4 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Mail
-alt - 5 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Music
+alt - 4 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Claude
+alt - 5 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Mail
 alt - 7 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Calendar
-alt - 8 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Signal
-alt - 9 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Slack
+alt - 8 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py "Microsoft Teams" MSTeams
+alt - 9 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Notion
 
 # Focus on the Desktops
-alt - 0 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-space-uuid.py 13BCCB37-71C8-4804-A3D1-B8218650A51A
-alt - 6 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-space-uuid.py CCB93514-564F-47D8-B150-90E8AAF301F9
+alt - 0 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-space-uuid.py 511A56BC-EC2D-4CC9-8622-8A14A8B8DB1E
+alt - 6 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-space-uuid.py 1DBB4904-76C4-4E68-85B2-574CAAABA457
+
+# Change the split direction
+alt - s : yabai -m window --toggle split
 
 # Enter fullscreen mode for the focused container
 alt - f : yabai -m window --toggle zoom-fullscreen

@@ -26,23 +26,29 @@ def get_window_data_from_application_name(
 
 
 def main():
-    # Get the application name from the command line arguments
-    if len(sys.argv) != 2:
-        print(f"Usage: {sys.argv[0]} <app_name>")
+    # Get the application names from the command line arguments
+    if len(sys.argv) < 2:
+        print(f"Usage: {sys.argv[0]} <app_name1> [app_name2] [app_name3] ...")
         return
 
-    app_name = sys.argv[1]
+    app_names = sys.argv[1:]
 
-    yabai_windows = run_bash_command("yabai -m query --windows", json_output=True)
+    yabai_windows, ret_code = run_bash_command("yabai -m query --windows", json_output=True)
 
-    if yabai_windows is None:
+    if ret_code != 0 or yabai_windows is None:
         return
 
-    window = get_window_data_from_application_name(yabai_windows, app_name)
+    for app_name in app_names:
+        window = get_window_data_from_application_name(yabai_windows, app_name)
 
-    # If the window was found, focus to it
-    if window is not None:
-        run_bash_command(f"yabai -m space --focus {window['space']}")
+        # If the window was found, focus to it and exit
+        if window is not None:
+            run_bash_command(f"yabai -m space --focus {window['space']}")
+            run_bash_command(f"yabai -m window --focus {window['id']}")
+            print(f"Focused on {app_name}")
+            return
+
+    print("None of the specified applications were found.")
 
 
 if __name__ == "__main__":

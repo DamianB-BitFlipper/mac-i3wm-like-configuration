@@ -124,13 +124,13 @@ alt + shift - up : yabai -m window --swap north || $(yabai -m window --display n
 alt + shift - right : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
 
 # Go to specific applications
-alt - 1 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Emacs
+alt - 1 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Emacs --window-title "^(?!.*vterm).*$" # Go to the Emacs without vterm in its window title
 alt - 2 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py kitty
 alt - 3 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py "Brave Browser"
 alt - 4 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Claude
 alt - 5 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Mail
 alt - 7 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Calendar
-alt - 8 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py "Microsoft Teams" MSTeams
+alt - 8 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Slack
 alt - 9 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Notion
 
 # Focus on the Desktops

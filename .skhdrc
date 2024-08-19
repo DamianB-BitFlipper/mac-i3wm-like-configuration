@@ -124,18 +124,19 @@ alt + shift - up : yabai -m window --swap north || $(yabai -m window --display n
 alt + shift - right : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
 
 # Go to specific applications
+alt - 0x32 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Emacs --window-title ".*vterm.*" # alt - backtick : Go to the Emacs with vterm in its window title
 alt - 1 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Emacs --window-title "^(?!.*vterm).*$" # Go to the Emacs without vterm in its window title
 alt - 2 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py kitty
 alt - 3 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py "Brave Browser"
 alt - 4 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Claude
 alt - 5 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Mail
-alt - 7 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Calendar
+alt - 7 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py "Microsoft Outlook"
 alt - 8 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Slack
 alt - 9 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-application.py Notion
 
 # Focus on the Desktops
-alt - 0 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-space-uuid.py 511A56BC-EC2D-4CC9-8622-8A14A8B8DB1E
-alt - 6 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-space-uuid.py 1DBB4904-76C4-4E68-85B2-574CAAABA457
+alt - 0 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-space-uuid.py 43C9EB0D-4961-454D-8B2D-F683569518A3
+alt - 6 : /Users/damianb/.config/tiling-window-manager/scripts/go-to-space-uuid.py 511A56BC-EC2D-4CC9-8622-8A14A8B8DB1E
 
 # Change the split direction
 alt - s : yabai -m window --toggle split
